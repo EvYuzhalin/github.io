@@ -1,0 +1,57 @@
+=mixin('page-content')
+	/ .note.red.rounded
+	.container
+		h1 СПИСОК
+		.container__task
+			.task__elements
+				.elements__one
+					label class="check"
+                  		input id="checkbox" type="checkbox" checked="checked"
+                  		span class="checkmark"
+					.elements__text
+						h3.active Задача
+						p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+					.elements__remove
+						img src="images/shape_ready.png"
+			.task__elements.no-ready
+				.elements__one.two__element
+					label class="check"
+                  		input id="checkbox" type="checkbox"
+                  		span class="checkmark box-shadow"
+					.elements__text
+						h3 Задача
+						p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые.
+					.elements__remove
+						img src="images/shape.png"
+			.task__elements.no-ready
+				.elements__one.two__element
+					label class="check"
+                  		input id="checkbox" type="checkbox"
+                  		span class="checkmark box-shadow"
+					.elements__text
+						h3 Задача
+						p Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML.
+					.elements__remove
+						img src="images/shape.png"
+		.line
+		h2 НОВАЯ
+		.task__newBlock
+			.newBlock__form
+					input id="text" type="text" placeholder="Название задачи"
+					.line__lineTwo
+					textarea rows="5" name="text" placeholder="Описание задачи"
+					button Добавить
+		
+
+
+
+
+
+
+
+- pageStyles = false
+- pageScripts = false
+- pageContent = mixin('page-content')
+- pageBodyAdditional = false
+=partial('./parts/page')
+=mixin('page-body')
